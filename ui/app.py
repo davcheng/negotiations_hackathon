@@ -11,8 +11,8 @@ def reply():
 	# insert logic here for chat bot responses
 	# TODO: maybe print sentiment?
 	# TODO: maybe show product they are referring to?
-    return jsonify( { 'text': "yo" } )
-    # return jsonify( { 'text': execute.decode_line(sess, model, enc_vocab, rev_dec_vocab, request.form['msg'] ) } )
+    # return jsonify( { 'text': "yo" } )
+    return jsonify( { 'text': execute.decode_line(sess, model, enc_vocab, rev_dec_vocab, request.form['msg'] ) } )
 
 @app.route("/")
 def index(): 
@@ -29,8 +29,9 @@ Init seq2seq model
 import tensorflow as tf
 import execute
 
+
 sess = tf.Session()
-# sess, model, enc_vocab, rev_dec_vocab = execute.init_session(sess, conf='seq2seq_serve.ini')
+sess, model, enc_vocab, rev_dec_vocab = execute.init_session(sess, conf='seq2seq_serve.ini')
 #_________________________________________________________________
 
 # start app
