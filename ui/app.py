@@ -9,6 +9,8 @@ app = Flask(__name__,static_url_path="/static")
 @app.route('/message', methods=['POST'])
 def reply():
 	# insert logic here for chat bot responses
+	# TODO: maybe print sentiment?
+	# TODO: maybe show product they are referring to?
     return jsonify( { 'text': "yo" } )
     # return jsonify( { 'text': execute.decode_line(sess, model, enc_vocab, rev_dec_vocab, request.form['msg'] ) } )
 
