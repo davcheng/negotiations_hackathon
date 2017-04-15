@@ -8,7 +8,9 @@ app = Flask(__name__,static_url_path="/static")
 #
 @app.route('/message', methods=['POST'])
 def reply():
-    return jsonify( { 'text': execute.decode_line(sess, model, enc_vocab, rev_dec_vocab, request.form['msg'] ) } )
+	# insert logic here for chat bot responses
+    return jsonify( { 'text': "yo" } )
+    # return jsonify( { 'text': execute.decode_line(sess, model, enc_vocab, rev_dec_vocab, request.form['msg'] ) } )
 
 @app.route("/")
 def index(): 
@@ -26,7 +28,7 @@ import tensorflow as tf
 import execute
 
 sess = tf.Session()
-sess, model, enc_vocab, rev_dec_vocab = execute.init_session(sess, conf='seq2seq_serve.ini')
+# sess, model, enc_vocab, rev_dec_vocab = execute.init_session(sess, conf='seq2seq_serve.ini')
 #_________________________________________________________________
 
 # start app

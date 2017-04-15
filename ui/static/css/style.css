@@ -16,8 +16,8 @@ body {
 }
 
 body {
-  background: -webkit-linear-gradient(315deg, #044f48, #2a7561);
-  background: linear-gradient(135deg, #044f48, #2a7561);
+  /*background: -webkit-linear-gradient(315deg, #044f48, #2a7561);*/
+  /*background: linear-gradient(135deg, #044f48, #2a7561);*/
   background-size: cover;
   font-family: 'Open Sans', sans-serif;
   font-size: 12px;
@@ -31,7 +31,7 @@ body {
   top: 0;
   left: 0;
   z-index: 1;
-  background: url("/static/res/hd2.jpg") no-repeat 0 0;
+  background: url("/static/res/background.png") no-repeat 0 0;
   -webkit-filter: blur(80px);
           filter: blur(80px);
   -webkit-transform: scale(1.2);
@@ -183,8 +183,9 @@ Messages
   float: right;
   color: #fff;
   text-align: right;
-  background: -webkit-linear-gradient(330deg, #248A52, #257287);
-  background: linear-gradient(120deg, #248A52, #257287);
+  /* fix this */
+  background: -webkit-linear-gradient(330deg, #f10214, #f10214);
+  background: linear-gradient(120deg, #f10214, #f10214);
   border-radius: 10px 10px 0 10px;
 }
 .messages .message.message-personal::before {
@@ -192,7 +193,7 @@ Messages
   right: 0;
   border-right: none;
   border-left: 5px solid transparent;
-  border-top: 4px solid #257287;
+  border-top: 4px solid #f10214;
   bottom: -4px;
 }
 .messages .message:last-child {
@@ -307,7 +308,7 @@ Message Box
   right: 10px;
   color: #fff;
   border: none;
-  background: #248A52;
+  background: #f10214;
   font-size: 10px;
   text-transform: uppercase;
   line-height: 1;
@@ -318,7 +319,7 @@ Message Box
   transition: background .2s ease;
 }
 .message-box .message-submit:hover {
-  background: #1D7745;
+  background: #c00214;
 }
 
 /*--------------------
